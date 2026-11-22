@@ -1,0 +1,9 @@
+{
+  "block.chottonokosu.chotto_nokosu_pipe": "Leave-a-Little Pipe",
+  "itemGroup.chottonokosu": "Leave-a-Little Pipe",
+  "message.chottonokosu.filter_set": "Filter: %s",
+  "gui.chottonokosu.clear_filter": "Any item",
+  "gui.chottonokosu.any_item": "Any item",
+  "gui.chottonokosu.keep": "Keep in source: %s",
+  "gui.chottonokosu.batch": "Max per move: %s"
+}

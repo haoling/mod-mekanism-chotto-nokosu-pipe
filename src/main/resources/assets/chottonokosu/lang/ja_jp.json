@@ -1,0 +1,9 @@
+{
+  "block.chottonokosu.chotto_nokosu_pipe": "ちょっと残すパイプ",
+  "itemGroup.chottonokosu": "ちょっと残すパイプ",
+  "message.chottonokosu.filter_set": "フィルター: %s",
+  "gui.chottonokosu.clear_filter": "フィルター解除",
+  "gui.chottonokosu.any_item": "すべてのアイテム",
+  "gui.chottonokosu.keep": "元に残す個数: %s",
+  "gui.chottonokosu.batch": "1回の搬出上限: %s"
+}

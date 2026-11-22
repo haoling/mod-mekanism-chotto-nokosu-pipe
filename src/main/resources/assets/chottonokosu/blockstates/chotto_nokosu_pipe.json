@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "chottonokosu:block/chotto_nokosu_pipe" },
+    "facing=east":  { "model": "chottonokosu:block/chotto_nokosu_pipe", "y": 90 },
+    "facing=south": { "model": "chottonokosu:block/chotto_nokosu_pipe", "y": 180 },
+    "facing=west":  { "model": "chottonokosu:block/chotto_nokosu_pipe", "y": 270 },
+    "facing=up":    { "model": "chottonokosu:block/chotto_nokosu_pipe", "x": 270 },
+    "facing=down":  { "model": "chottonokosu:block/chotto_nokosu_pipe", "x": 90 }
+  }
+}

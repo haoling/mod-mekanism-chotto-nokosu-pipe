@@ -1,17 +1,25 @@
-# ちょっと残すパイプ (Leave-a-Little Pipe)
 
-NeoForge 1.21.1 用のミニ mod。Mekanism の Logistical Transporter とつなげられる搬出パイプで、
-**品目ごとに「元に残す個数」を決め、それを超えた分だけ**搬出する（Mekanism 標準のソーターは在庫量を見られない）。
+Installation information
+=======
 
-- チェストなどの横に置くと、後ろの在庫 → 前のブロック（チェスト / Logistical Transporter など標準のアイテム受け口を持つもの）へ流す。Mekanism には依存しない。
-- 設定: アイテムを持って右クリック = フィルター指定。素手で右クリック = GUI（残す個数 0〜30000、1回の搬出上限 1〜64）。フィルターなしなら全アイテム対象。
-- 置き方: 在庫のブロックに向けて置くと、反対側が出口。
-- レシピ: 鉄インゴット7 + コンパレーター + ホッパー。
+This template repository can be directly cloned to get you started with a new
+mod. Simply create a new repository cloned from this one, by following the
+instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-## 開発
-```
-./gradlew build            # build/libs/chottonokosu-<version>.jar
-./gradlew runGameTestServer  # 自動テスト
-```
-タグ `vX.Y.Z` を push すると GitHub Release に jar が付く（`.github/workflows/release.yml`）。
-mod は両側（サーバーとクライアント）への導入が必要。
+Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+
+If at any point you are missing libraries in your IDE, or you've run into problems you can
+run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
+{this does not affect your code} and then start the process again.
+
+Mapping Names:
+============
+By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
+in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
+license. For the latest license text, refer to the mapping file itself, or the reference copy here:
+https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+
+Additional Resources: 
+==========
+Community Documentation: https://docs.neoforged.net/  
+NeoForged Discord: https://discord.neoforged.net/
