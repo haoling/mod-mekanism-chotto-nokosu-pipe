@@ -35,3 +35,21 @@ jobs:
         run: |
           gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --generate-notes
           gh release upload "$RELEASE_TAG" build/libs/chottonokosu-*.jar --clobber
+      # Modrinth にも同じ jar を公開する。AutoModpack は jar の SHA-1 を Modrinth と照合し、
+      # 一致しない jar を「未検証」として警告するため、GitHub Release と同一の jar を載せる。
+      # リポジトリ変数 MODRINTH_ID（プロジェクト ID）とシークレット MODRINTH_TOKEN が未設定なら何もしない。
+      - name: Publish to Modrinth
+        if: env.RELEASE_TAG != '' && env.MODRINTH_ID != '' && env.MODRINTH_TOKEN != ''
+        env:
+          MODRINTH_ID: ${{ vars.MODRINTH_ID }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: ${{ vars.MODRINTH_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: build/libs/chottonokosu-*.jar
+          loaders: neoforge
+          game-versions: 1.21.1
+          version-type: release
+          version: ${{ env.RELEASE_TAG }}
+          name: ${{ env.RELEASE_TAG }}
