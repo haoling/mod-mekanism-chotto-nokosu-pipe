@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": ["III", "ICI", "IHI"],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "C": { "item": "minecraft:comparator" },
+    "H": { "item": "minecraft:hopper" }
+  },
+  "result": { "id": "chottonokosu:chotto_nokosu_pipe", "count": 1 }
+}
